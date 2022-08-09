@@ -5,12 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="estilo.css" rel="stylesheet">
+
     <title>Calculadora</title>
 </head>
 
 <body>
     <div class="fundo">
         <h1>Giovana Kinocita</h1>
+
+        <span id="redesocial">
+            <a href="https://linkedin.com/in/giovanakinocita">
+                <img src="linkedin.png">
+            </a>
+        </span>
+        
+        <span id="redesocial">
+            <a href="https://github.com/giovanakinocita">
+                <img src="github.png">
+            </a>
+        </dspan>
+
         <div class="calculadora">
             <h1 id="calc">Calculadora</h1>  
             <p id="resultado"></p> 
@@ -18,45 +32,46 @@
                 
                 <!-- Primeira linha -->
                 <tr>
-                    <td><button>C</button></td>
-                    <td><button><</button></td>
-                    <td><button>&#247;</button></td>
-                    <td><button>x</button></td>
+                    <td><button onclick="clean()">C</button></td>
+                    <td><button onclick="back()">&#8592;</button></td>
+                    <td><button onclick="insert('/')">&#247;</button></td>
+                    <td><button onclick="insert('*')">x</button></td>
                 </tr>
 
                 <!-- Segunda linha -->
                 <tr>
-                    <td><button>7</button></td>
-                    <td><button>8</button></td>
-                    <td><button>9</button></td>
-                    <td><button>-</button></td>
+                    <td><button onclick="insert('7')">7</button></td>
+                    <td><button onclick="insert('8')">8</button></td>
+                    <td><button onclick="insert('9')">9</button></td>
+                    <td><button onclick="insert('-')">-</button></td>
                 </tr>
 
                 <!-- Terceira linha -->
                 <tr>
-                    <td><button>4</button></td>
-                    <td><button>5</button></td>
-                    <td><button>6</button></td>
-                    <td><button>+</button></td>
+                    <td><button onclick="insert('4')">4</button></td>
+                    <td><button onclick="insert('5')">5</button></td>
+                    <td><button onclick="insert('6')">6</button></td>
+                    <td><button onclick="insert('+')">+</button></td>
                 </tr>
 
                 <!-- Quarta linha -->
                 <tr>
-                    <td><button>1</button></td>
-                    <td><button>2</button></td>
-                    <td><button>3</button></td>
-                    <td rowspan="2"><button id="botao-igual">=</button></td>
+                    <td><button onclick="insert('1')">1</button></td>
+                    <td><button onclick="insert('2')">2</button></td>
+                    <td><button onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button id="botao-igual" onclick="calcular()">=</button></td>
                 </tr>
 
                 <tr>
-                    <td colspan="2"><button id="botao-zero">0</button></td>
-                    <td><button>.</button></td>
+                    <td colspan="2"><button id="botao-zero" onclick="insert('0')">0</button></td>
+                    <td><button onclick="insert('.')">.</button></td>
                 </tr>
 
-            </table>         
-        </div>
+            </table>   
     </div>
 
+<script src="estilo_js.js"></script>
     
+
 </body>
 </html>
